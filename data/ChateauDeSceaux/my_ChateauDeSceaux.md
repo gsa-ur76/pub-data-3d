@@ -35,5 +35,12 @@ https://theses.hal.science/tel-00996935
 
 -rw-rw-r-- 1   93M Jan  3 17:07 TH2014PEST1033.pdf
 
+# lokal halten:
+
+mv work/ImageDataset_SceauxCastle/images .
+git add images/
+du -h images/
+13M	images/
+
 #---------------------------------------------------------------------------
 #---------------------------------------------------------------------------
