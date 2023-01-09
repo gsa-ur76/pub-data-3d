@@ -26,9 +26,10 @@ set -x
 
 rm -rf /tmp/TMPcolmap
 mkdir -pv /tmp/TMPcolmap/img
+cd $BIN_DIR/../data/tsukuba-images/
 cp -a \
-   ../data/tsukuba-images/images_scene1.row3.col1-5/scene1.row3.col2.ppm \
-   ../data/tsukuba-images/images_scene1.row3.col1-5/scene1.row3.col4.ppm \
+   images_scene1.row3.col1-5/scene1.row3.col2.ppm \
+   images_scene1.row3.col1-5/scene1.row3.col4.ppm \
    /tmp/TMPcolmap/img
 
 cd /tmp/TMPcolmap
@@ -64,6 +65,8 @@ elif [ "$MODE" = "6" ] ; then
                     --SiftExtraction.use_gpu 1 \
                     --database_path database.db \
                     --image_path img
+else
+    echo " mode=$MODE is outide of 1..6 - exit "
 fi
 
 # frm database*
